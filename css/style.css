@@ -1,0 +1,404 @@
+    body {
+        background-color: rgba(128, 128, 128, 0.37);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: rgba(128, 128, 128, 0.37);
+        font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    #todoApp {
+        width: 60%;
+        padding: 0px 0px 25px 0px;
+        margin: 25px auto;
+        background-color: rgba(228, 226, 226, 0.87);
+        -webkit-box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+        -moz-box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+        box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+    }
+    
+    #resetTodo {
+        cursor: pointer;
+        text-align: center;
+        /* font-family: inherit; */
+        padding: -10px -6px;
+        line-height: 3em;
+        background-color: #51E4D2;
+        box-shadow: 2px 1px 10px -1px rgba(100, 100, 100, 0.8);
+    }
+    
+    #headerBar {
+        padding: 10px 20px;
+    }
+    
+    article.itemList {
+        width: 30%;
+        float: left;
+        margin: 5px 10px;
+        -webkit-box-shadow: 5px 3px 15px 0px rgba(0, 0, 0, 0.8);
+        -moz-box-shadow: 5px 3px 15px 0px rgba(0, 0, 0, 0.8);
+        box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.6);
+    }
+    
+    ul {
+        margin: 0;
+        list-style: none;
+        padding: 0px 0px 50px 0px;
+        /*VERY IMPORTANT DO NOT REMOVE*/
+        background-color: rgb(255, 255, 255);
+    }
+    
+    li.todoItem {
+        padding: 14px 14px;
+        cursor: move;
+        background-color: #ffffff;
+        border-bottom: 2px solid #ededed;
+    }
+    
+    .todoItemTitle {
+        width: 70%;
+        float: left;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+    
+    .todoItemDelete {
+        float: right;
+    }
+    
+    .totalBox,
+    .countBox {
+        float: right;
+        height: 50px;
+        width: 60px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 2px;
+        padding: 15px;
+        -webkit-box-shadow: iinset 2px 2px 7px 0px rgba(100, 100, 100, 0.7);
+        -moz-box-shadow: inset 2px 2px 7px 0px rgba(100, 100, 100, 0.7);
+        box-shadow: inset 2px 2px 7px 0px rgba(100, 100, 100, 0.7);
+        font-size: 16px;
+        background-color: rgb(186, 186, 186);
+        /* font-size: 5em; */
+        text-align: center;
+        margin-bottom: .5em;
+        font-family: "Open Sans", sans-serif;
+        /* font-weight: 700; */
+        color: rgba(38, 32, 22, 0.75);
+        text-shadow: 1px 2px 4px #fff6e6, 0px 0px 0px black, 0px 0px 2px white;
+    }
+    
+    .listHeader {
+        background-color: rgb(120, 120, 120);
+        padding: 10px;
+    }
+    
+    #todoTextBox {
+        margin: 6px 15px 10px 0px;
+        font-size: 25px;
+    }
+    
+    .inputBox {
+        float: left;
+    }
+    
+    .listTextBox {
+        text-align: center;
+        width: 50%;
+        float: left;
+        /*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);*/
+        color: rgba(2, 37, 23, 0.82);
+        font-size: 18px;
+        font-weight: bold;
+        /* margin: 0; */
+        /* padding: 5px; */
+        line-height: 3em;
+    }
+    
+    .totalBox {
+        float: right;
+    }
+    
+    .addButton,
+    .removeButton {
+        display: inline-block;
+        float: right;
+        border-radius: 50%;
+        color: #f5f5f5;
+        text-align: center;
+        text-decoration: none;
+        background: #C2C0C0;
+        box-shadow: 0 0 3px gray;
+        background-color: #57A429;
+        width: 30px;
+        height: 30px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        line-height: 30px;
+        font-size: 16px;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 100;
+    }
+    
+    .addButton {
+        background-color: #5677fc;
+        width: 50px;
+        line-height: 40px;
+        height: 50px;
+        font-size: 50px;
+    }
+    
+    .removeButton:hover {
+        background-color: #262626;
+    }
+    
+    @media only screen and (min-width:300px) and (max-width: 719px) {
+        body {
+            background-color: rgba(128, 128, 128, 0.37);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: rgba(128, 128, 128, 0.37);
+            font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        #todoApp {
+            width: 100%;
+            padding: 0px 0px 25px 0px;
+            margin: 25px auto;
+            background-color: rgba(228, 226, 226, 0.87);
+            -webkit-box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+            -moz-box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+            box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+        }
+        article.itemList {
+            width: 97%;
+        }
+        #todoTextBox {
+            margin: 6px 15px 10px 0px;
+            font-size: 24px;
+        }
+        ul {
+            margin: 0;
+            list-style: none;
+            padding: 0px 0px 100px 0px;
+            background-color: rgb(255, 255, 255);
+        }
+        .listTextBox {
+            text-align: center;
+            width: 50%;
+            float: left;
+            /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75); */
+            color: rgba(2, 37, 23, 0.82);
+            font-size: 30px;
+            font-weight: bold;
+            /* margin: 0; */
+            /* padding: 5px; */
+            line-height: 4em;
+        }
+        .todoItem {
+            padding: 0px 0px 0px 30px;
+            font-size: 40px;
+        }
+        .addButton,
+        .removeButton {
+            display: inline-block;
+            float: right;
+            border-radius: 50%;
+            color: #f5f5f5;
+            text-align: center;
+            text-decoration: none;
+            background: #C2C0C0;
+            box-shadow: 0 0 3px gray;
+            background-color: #57A429;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+            line-height: 50px;
+            font-size: 50px;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 100;
+        }
+        .addButton {
+            background-color: #5677fc;
+            line-height: 50px;
+        }
+        .totalBox,
+        .countBox {
+            float: right;
+            height: 86px;
+            width: 100px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 2px;
+            padding: 20px;
+            -webkit-box-shadow: iinset 2px 2px 7px 0px rgba(100, 100, 100, 0.7);
+            -moz-box-shadow: inset 2px 2px 7px 0px rgba(100, 100, 100, 0.7);
+            box-shadow: inset 2px 2px 7px 0px rgba(100, 100, 100, 0.7);
+            font-size: 30px;
+            background-color: rgb(186, 186, 186);
+            /* font-size: 5em; */
+            text-align: center;
+            margin: 10px;
+            font-family: "Open Sans", sans-serif;
+            /* font-weight: 700; */
+            color: rgba(38, 32, 22, 0.75);
+            text-shadow: 1px 2px 4px #fff6e6, 0px 0px 0px black, 0px 0px 2px white;
+        }
+        .totalBox {
+            width: 92%;
+            /* padding: 23px 27px; */
+            margin: 20px auto;
+        }
+    }
+    
+    @media only screen and (min-width:720px) and (max-width: 960px) {
+        body {
+            background-color: rgba(128, 128, 128, 0.37);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: rgba(128, 128, 128, 0.37);
+            font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        article.itemList {
+            width: 96%;
+            float: left;
+            margin: 5px 10px;
+            -webkit-box-shadow: 5px 3px 15px 0px rgba(0, 0, 0, 0.8);
+            -moz-box-shadow: 5px 3px 15px 0px rgba(0, 0, 0, 0.8);
+            box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.6);
+        }
+        #todoApp {
+            width: 100%;
+            padding: 0px 0px 25px 0px;
+            margin: 25px auto;
+            background-color: rgba(228, 226, 226, 0.87);
+            -webkit-box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+            -moz-box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+            box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+        }
+        #todoTextBox {
+            margin: 6px 15px 10px 0px;
+            font-size: 25px;
+        }
+        ul {
+            margin: 0;
+            list-style: none;
+            padding: 0px 0px 100px 0px;
+            background-color: rgb(255, 255, 255);
+        }
+        .listTextBox {
+            text-align: center;
+            width: 50%;
+            float: left;
+            /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75); */
+            color: rgba(2, 37, 23, 0.82);
+            font-size: 50px;
+            font-weight: bold;
+            /* margin: 0; */
+            /* padding: 5px; */
+            line-height: 3em;
+        }
+        .todoItem {
+            padding: 0px 0px 0px 30px;
+            font-size: 40px;
+        }
+        .addButton,
+        .removeButton {
+            display: inline-block;
+            float: right;
+            border-radius: 50%;
+            color: #f5f5f5;
+            text-align: center;
+            text-decoration: none;
+            background: #C2C0C0;
+            box-shadow: 0 0 3px gray;
+            background-color: #57A429;
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+            line-height: 50px;
+            font-size: 50px;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 100;
+        }
+        .addButton {
+            background-color: #5677fc;
+            line-height: 50px;
+        }
+        .totalBox,
+        .countBox {
+            float: right;
+            height: 100px;
+            width: 200px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 2px;
+            padding: 20px;
+            -webkit-box-shadow: iinset 2px 2px 7px 0px rgba(100, 100, 100, 0.7);
+            -moz-box-shadow: inset 2px 2px 7px 0px rgba(100, 100, 100, 0.7);
+            box-shadow: inset 2px 2px 7px 0px rgba(100, 100, 100, 0.7);
+            font-size: 30px;
+            background-color: rgb(186, 186, 186);
+            /* font-size: 5em; */
+            text-align: center;
+            margin: 10px;
+            font-family: "Open Sans", sans-serif;
+            /* font-weight: 700; */
+            color: rgba(38, 32, 22, 0.75);
+            text-shadow: 1px 2px 4px #fff6e6, 0px 0px 0px black, 0px 0px 2px white;
+        }
+    }
+    
+    @media only screen and (min-width:960px) and (max-width: 1300px) {
+        body {
+            background-color: rgba(128, 128, 128, 0.37);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: rgba(128, 128, 128, 0.37);
+            font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        #todoApp {
+            width: 80%;
+            padding: 0px 0px 25px 0px;
+            margin: 25px auto;
+            background-color: rgba(228, 226, 226, 0.87);
+            -webkit-box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+            -moz-box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+            box-shadow: 3px 3px 13px 0px rgba(50, 49, 50, 0.76);
+        }
+    }
